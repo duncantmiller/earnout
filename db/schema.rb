@@ -11,9 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141013205501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "deals", force: true do |t|
+    t.integer  "org_id"
+    t.string   "name"
+    t.text     "description"
+    t.text     "default_url"
+    t.string   "status"
+    t.datetime "expires_on"
+    t.integer  "commission"
+    t.string   "commission_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "landing_pages", force: true do |t|
+    t.integer  "deal_id"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orgs", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

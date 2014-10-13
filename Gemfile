@@ -40,6 +40,30 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 gem 'foundation-rails'
+gem 'friendly_id'
+gem 'whenever', require: false
+
+group :development, :test do
+   gem 'rspec-rails'
+  #  gem 'guard'
+  #  gem 'guard-rspec', require: false
+  #  gem 'lazy_susan', '0.7.0'
+  #  gem 'rack-mini-profiler', '0.1.26'
+   gem 'simplecov'
+   gem 'fabrication'
+   gem 'faker'
+  #  gem 'bullet'
+  #  gem 'capybara'
+  #  gem 'launchy'
+   gem 'pry-rails'
+   gem 'puma-rails'
+  #  gem 'database_cleaner', git: 'git@github.com:bmabey/database_cleaner.git'
+  #  gem 'selenium-webdriver'
+  #  gem 'poltergeist'
+  #  gem 'typhoeus'
+  #  gem 'vcr'
+end
+
 
 
 ruby "2.1.1"
