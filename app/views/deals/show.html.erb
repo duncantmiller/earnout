@@ -1,44 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Org:</strong>
-  <%= @deal.org_id %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @deal.name %>
-</p>
+  <p>
+    <strong>Org:</strong>
+    <%= @deal.org_id %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @deal.description %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @deal.name %>
+  </p>
 
-<p>
-  <strong>Default url:</strong>
-  <%= @deal.default_url %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @deal.description %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @deal.status %>
-</p>
+  <p>
+    <strong>Default url:</strong>
+    <%= @deal.default_url %>
+  </p>
 
-<p>
-  <strong>Expires on:</strong>
-  <%= @deal.expires_on %>
-</p>
+  <p>
+    <strong>Status:</strong>
+    <%= @deal.status %>
+  </p>
 
-<p>
-  <strong>Commission:</strong>
-  <%= @deal.commission %>
-</p>
+  <p>
+    <strong>Expires on:</strong>
+    <%= @deal.expires_on %>
+  </p>
 
-<p>
-  <strong>Commission type:</strong>
-  <%= @deal.commission_type %>
-</p>
+  <p>
+    <strong>Commission:</strong>
+    <%= @deal.commission %>
+  </p>
 
-<%= link_to 'Edit', edit_deal_path(@deal) %> |
-<%= link_to 'Back', deals_path %>
+  <p>
+    <strong>Commission type:</strong>
+    <%= @deal.commission_type %>
+  </p>
+
+  <%= link_to 'Edit', edit_deal_path(@deal) %> |
+  <%= link_to 'Back', deals_path %>
+</div>
