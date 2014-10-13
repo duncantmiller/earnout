@@ -1,3 +1,39 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+section.home-splash {
+  & > section {
+    overflow: hidden;
+    & > section {
+      h2, h4 {
+      color: #fff;
+      }
+      display: block;
+      padding: 8rem 4rem 8rem 4rem;
+      background: rgba(100,100,100,.7);
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      text-align: center;
+      a {
+        margin-top: 1rem;
+      }
+    }
+  }
+  background: url('/assets/frontpage-splash.jpg') center;
+  background-size: cover;
+}
+
+section.how-it-works .wrapper .columns {
+  padding: 3rem auto;
+  width: 100%;
+  margin: 4rem auto;
+  > ul li {
+    list-style-type: none;
+    float: left;
+    width: 235px;
+    text-align: center;
+    font-family: "proximanova_light";
+    font-weight: normal;
+    line-height: 1.6em;
+    font-size: 16px;
+    padding: 0 0.5rem;
+  }
+}

@@ -42,6 +42,8 @@ gem 'rails_12factor', group: :production
 gem 'foundation-rails'
 gem 'friendly_id'
 gem 'whenever', require: false
+gem 'compass-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
    gem 'rspec-rails'

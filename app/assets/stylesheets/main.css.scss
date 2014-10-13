@@ -1,0 +1,36 @@
+@import 'foundation-icons';
+@import "compass/layout/sticky-footer";
+@include sticky-footer(10rem);
+#footer {
+  padding-top: 1rem;
+  background-color: #555;
+  > div ul {
+      &.home-social {
+        padding-top: 0.5rem;
+        float: right;
+      }
+      li {
+        display: inline-block;
+        list-style-type: none;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.3em;
+        font-size: 16px;
+        padding-right: 1em;
+        a {
+          color: #fff;
+          i {
+            font-size: 2rem;
+          }
+        }
+      }
+  }
+  > div p {
+    color: #fff;
+    padding-top: 1rem;
+  }
+}
+
+i.small { font-size: 1rem; }
+i.medium { font-size: 2rem; }
+i.large { font-size: 4rem; }
