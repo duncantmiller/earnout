@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deal:</strong>
+  <%= @landing_page.deal_id %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @landing_page.url %>
+</p>
+
+<%= link_to 'Edit', edit_landing_page_path(@landing_page) %> |
+<%= link_to 'Back', landing_pages_path %>

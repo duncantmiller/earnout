@@ -1,0 +1,25 @@
+<%= form_for(@landing_page) do |f| %>
+  <% if @landing_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@landing_page.errors.count, "error") %> prohibited this landing_page from being saved:</h2>
+
+      <ul>
+      <% @landing_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :deal_id %><br>
+    <%= f.number_field :deal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_area :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
