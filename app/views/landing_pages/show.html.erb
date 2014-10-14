@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Deal:</strong>
-  <%= @landing_page.deal_id %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @landing_page.url %>
-</p>
+  <p>
+    <strong>Deal:</strong>
+    <%= @landing_page.deal_id %>
+  </p>
 
-<%= link_to 'Edit', edit_landing_page_path(@landing_page) %> |
-<%= link_to 'Back', landing_pages_path %>
+  <p>
+    <strong>Url:</strong>
+    <%= @landing_page.url %>
+  </p>
+
+  <%= link_to 'Edit', edit_landing_page_path(@landing_page) %> |
+  <%= link_to 'Back', landing_pages_path %>
+
+</div>

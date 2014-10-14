@@ -1,5 +1,6 @@
 class OrgsController < ApplicationController
   before_action :set_org, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /orgs
   # GET /orgs.json
@@ -14,7 +15,9 @@ class OrgsController < ApplicationController
 
   # GET /orgs/new
   def new
-    @org = Org.new
+    org = Org.create!
+    current_user.grant!("Admin", org)
+    redirect_to org
   end
 
   # GET /orgs/1/edit
@@ -23,19 +26,19 @@ class OrgsController < ApplicationController
 
   # POST /orgs
   # POST /orgs.json
-  def create
-    @org = Org.new(org_params)
-
-    respond_to do |format|
-      if @org.save
-        format.html { redirect_to @org, notice: 'Org was successfully created.' }
-        format.json { render :show, status: :created, location: @org }
-      else
-        format.html { render :new }
-        format.json { render json: @org.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def create
+  #   @org = Org.new(org_params)
+  #
+  #   respond_to do |format|
+  #     if @org.save
+  #       format.html { redirect_to @org, notice: 'Org was successfully created.' }
+  #       format.json { render :show, status: :created, location: @org }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @org.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /orgs/1
   # PATCH/PUT /orgs/1.json

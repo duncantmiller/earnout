@@ -1,0 +1,39 @@
+<h1>Listing deals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Org</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Default url</th>
+      <th>Status</th>
+      <th>Expires on</th>
+      <th>Commission</th>
+      <th>Commission type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% deals.each do |deal| %>
+      <tr>
+        <td><%= deal.org_id %></td>
+        <td><%= deal.name %></td>
+        <td><%= deal.description %></td>
+        <td><%= deal.default_url %></td>
+        <td><%= deal.status %></td>
+        <td><%= deal.expires_on %></td>
+        <td><%= deal.commission %></td>
+        <td><%= deal.commission_type %></td>
+        <td><%= link_to 'Show', deal %></td>
+        <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+        <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deal', new_deal_path %>

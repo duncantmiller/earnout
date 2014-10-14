@@ -2,6 +2,8 @@
 
   <p id="notice"><%= notice %></p>
 
+  <h1>Deal Details</h1>
+
   <p>
     <strong>Org:</strong>
     <%= @deal.org_id %>
@@ -44,4 +46,7 @@
 
   <%= link_to 'Edit', edit_deal_path(@deal) %> |
   <%= link_to 'Back', deals_path %>
+
+  <%= render partial: 'landing_pages/table', locals: { landing_pages: @deal.landing_pages } %>
+
 </div>
