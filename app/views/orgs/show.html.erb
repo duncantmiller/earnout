@@ -8,12 +8,12 @@
     <%= @org.name %>
   </p>
 
-  <p>
+  <!-- <p>
     <strong>Slug:</strong>
     <%= @org.slug %>
-  </p>
+  </p> -->
 
-  <%= link_to 'Edit', edit_org_path(@org) %> |
+  <%= link_to 'Edit', edit_org_path(@org) %>
 
   <%= render partial: 'deals/table', locals: { deals: @org.deals } %>
 

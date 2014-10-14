@@ -4,7 +4,8 @@
   <thead>
     <tr>
       <th>Deal</th>
-      <th>Url</th>
+      <th>Page</th>
+      <th>Tracking Url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= landing_page.deal_id %></td>
         <td><%= landing_page.url %></td>
+        <td><%= landing_page.tracking_url %></td>
         <td><%= link_to 'Show', landing_page %></td>
         <td><%= link_to 'Edit', edit_landing_page_path(landing_page) %></td>
         <td><%= link_to 'Destroy', landing_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
