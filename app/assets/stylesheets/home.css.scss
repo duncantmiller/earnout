@@ -42,3 +42,34 @@ section.how-it-works .wrapper .columns {
     padding: 0 0.5rem;
   }
 }
+
+
+
+/* custom styles for the responsive pricing table */
+/**
+ * Created by Jamal Mohammed (@mdjamal) in November 2013.
+ * http://www.icelabs.in
+ */
+
+#pricing-table {
+	padding: 0 0.9375rem 6rem;
+}
+
+#premium .pricing-table .title {
+	background-color: #a7ce58;
+	padding: 1.3875rem 1.25rem;
+}
+
+#premium .pricing-table {
+	margin-bottom: 0;
+}
+
+#premium .pricing-table .cta-button {
+	padding: 2.25rem 1.25rem 0;
+}
+
+#ultimate .pricing-table, #standard .pricing-table{
+	margin: 1rem 0;
+}
+
+/* end custom styles for the responsive pricing table */
