@@ -33,12 +33,15 @@
         <section class="top-bar-section">
           <ul class="right">
             <% if user_signed_in? %>
-              Logged in as <strong><%= current_user.email %></strong>.
-              <%= link_to 'Edit profile', edit_user_registration_path %> |
-              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              <li class="divider"></li>
+              <li><%= link_to current_user.email %></li>
+              <li class="divider"></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             <% else %>
               <li class="divider"></li>
-              <li><%= link_to "Start Now for Free", new_user_session_path %></li>
+              <li><%= link_to "Start Now for Free", new_user_registration_path %></li>
               <li class="divider"></li>
               <li><%= link_to "How it Works" %></li>
               <li class="divider"></li>
@@ -50,7 +53,7 @@
         </section>
       </nav>
       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
       <div id="root_footer"></div>
     </div>

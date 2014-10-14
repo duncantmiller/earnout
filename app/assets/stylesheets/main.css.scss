@@ -1,6 +1,14 @@
 @import 'foundation-icons';
 @import "compass/layout/sticky-footer";
 @include sticky-footer(10rem);
+#root p {
+  &.alert {
+    margin-bottom: 0;
+  }
+  &.notice {
+    margin-bottom: 0;
+  }
+}
 #footer {
   padding-top: 1rem;
   background-color: #555;
