@@ -44,6 +44,7 @@ gem 'friendly_id'
 gem 'whenever', require: false
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
+gem 'devise'
 
 group :development, :test do
    gem 'rspec-rails'
