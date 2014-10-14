@@ -1,29 +1,38 @@
 section.home-splash {
   & > section {
     overflow: hidden;
-    & > section {
+      & > section {
+      // background: rgba(100,100,100,.95);
+      padding: 8rem 2rem;
+      display: block;
       margin-left: auto;
       margin-right: auto;
-      padding: 4rem 12rem 10rem 12rem;
-      & > section {
-        h2, h4 {
-        color: #fff;
-        }
-        background: rgba(100,100,100,.95);
-        display: block;
-        padding: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-        text-align: center;
-        a {
-          margin-top: 1rem;
-        }
+      overflow: hidden;
+      text-align: center;
+      a {
+        margin-top: 1rem;
       }
     }
   }
-  background: url('/assets/frontpage-splash.jpg') center;
-  background-size: cover;
+  // background: url('/assets/frontpage-splash.jpg') center;
+  // background-size: cover;
+  background:
+	linear-gradient(
+		#a7ce58,
+		transparent
+	),
+	linear-gradient(
+		45deg,
+		#a7ce58,
+		transparent
+	),
+	linear-gradient(
+		-90deg,
+		#a7ce58,
+		transparent
+	);
+
+background-blend-mode: screen;
 }
 
 section.how-it-works .wrapper .columns {
