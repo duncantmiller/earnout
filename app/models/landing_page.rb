@@ -1,5 +1,5 @@
 class LandingPage < ActiveRecord::Base
-
+  require 'uri'
   belongs_to :deal
 
   validates :deal_id, presence: true
@@ -7,8 +7,20 @@ class LandingPage < ActiveRecord::Base
 
   before_create :generate_token
 
+  def url_host
+    parsed_url.host.match(/[^\.]+\.\w+$/).to_s.split(".")[-2,2].first
+  end
+
+  def parsed_url
+    URI.parse(url)
+  end
+
+  def url_path
+    parsed_url.path
+  end
+
   def tracking_url
-    "http://cloud4up.com/t/#{ token }"
+    "http://#{ url_host }.cloud4up.com/t/#{ token }#{url_path}"
   end
 
   private
