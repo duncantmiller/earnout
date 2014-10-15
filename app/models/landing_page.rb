@@ -3,7 +3,7 @@ class LandingPage < ActiveRecord::Base
   belongs_to :deal
 
   validates :deal_id, presence: true
-  validates :url, presence: true
+  validates :url, :url => {:allow_nil => true}
 
   before_create :generate_token
 
@@ -27,7 +27,7 @@ class LandingPage < ActiveRecord::Base
 
   def generate_token
     until self.token && !LandingPage.exists?(token: self.token) do
-      self.token = SecureRandom.urlsafe_base64(6, false)
+      self.token = SecureRandom.urlsafe_base64(4, false)
     end
   end
 

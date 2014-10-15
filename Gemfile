@@ -45,6 +45,7 @@ gem 'whenever', require: false
 gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 gem 'devise'
+gem 'validate_url'
 
 group :development, :test do
    gem 'rspec-rails'
