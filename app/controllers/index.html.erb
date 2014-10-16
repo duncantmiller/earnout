@@ -1,0 +1,37 @@
+<h1>Free Tools</h1>
+<p>Upload files, generate landing pages and send follow up emails for people who request the download link. Remember to use simple files (.xls vs .xlsx) and use .pdf whenver possible instead of .doc, .ppt etc. Also be sure to test your landing page and file before publishing the link.</p>
+<table class='ledger'>
+  <tr>
+    <th>Label</th>
+    <th>Course</th>
+    <th>Instructor</th>
+    <th>File</th>
+    <th>Public Landing Page</th>
+    <th>Popup Version</th>
+    <th>Unique Views</th>
+    <th>Leads Generated</th>
+    <th>Collection Rate</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @free_tools.each do |free_tool| %>
+  <tr>
+    <td><%= free_tool.label %></td>
+    <td><%= free_tool.course.label %></td>
+    <td><%= free_tool.instructor.name %></td>
+    <td><%= link_to 'download file', free_tool.file_url %></td>
+    <td><%= link_to 'view landing page', download_free_tool_url(free_tool) %>
+    <td><%= link_to 'view popup', popup_free_tool_url(free_tool) %>
+    <td><%= free_tool.unique_views_count_for_action(:download) %></td>
+    <td><%= free_tool.marketing_leads.size %></td>
+    <td><%= free_tool.calculate_collection_rate_for_action(:download) %>%</td>
+    <td><%= link_to 'Show', free_tool %></td>
+    <td><%= link_to 'Edit', edit_free_tool_path(free_tool) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Free tool', new_free_tool_path %>

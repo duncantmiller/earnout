@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   resources :orgs
 
-  resources :t, :controller => 'trackings', :as => 't'
+  resources :t, controller: 'trackings', as: 't'
+
+  resources :e, controller: 'earnings', as: 'e'
+
+  get '/smoke_test', to: 'home#smoke_test'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
