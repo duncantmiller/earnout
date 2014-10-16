@@ -1,0 +1,22 @@
+<div class="row">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Earning Details</h1>
+
+  <p>
+    <strong>Deal:</strong>
+    <%= @earning.deal_id %>
+  </p>
+
+  <p>
+    <strong>Amount:</strong>
+    <%= number_to_currency(@earning.amount) %>
+  </p>
+
+  <p>
+    <strong>Created:</strong>
+    <%= @earning.created_at %>
+  </p>
+
+</div

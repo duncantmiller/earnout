@@ -10,4 +10,8 @@ class EarningsController < ApplicationController
     earning.save!
   end
 
+  def show
+    @earning = Earning.find(params[:id])
+  end
+
 end
