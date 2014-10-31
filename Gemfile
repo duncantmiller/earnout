@@ -46,7 +46,7 @@ gem 'compass-rails'
 gem 'foundation-icons-sass-rails'
 gem 'devise'
 gem 'validate_url'
-gem 'rack-google-analytics', '~> 1.0.0.pre1'
+gem 'rack-google-analytics'
 
 group :development, :test do
    gem 'rspec-rails'
