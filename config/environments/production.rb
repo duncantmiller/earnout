@@ -78,4 +78,7 @@ Rails.application.configure do
 
   # for devise
   config.action_mailer.default_url_options = { host: 'earnout-now.com' }
+
+  # rack-google-analtyics gem
+  config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-56259099-1'
 end
