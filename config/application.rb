@@ -29,5 +29,8 @@ module Earnout
 
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
+    # rack-google-analtyics gem
+    config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-56259099-1'
+
   end
 end
