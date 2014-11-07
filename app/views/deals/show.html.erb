@@ -1,54 +1,50 @@
-<div class="row">
+<p id="notice"><%= notice %></p>
 
-  <p id="notice"><%= notice %></p>
+<h1>Deal Details</h1>
 
-  <h1>Deal Details</h1>
+<p>
+  <strong>Org:</strong>
+  <%= @deal.org_id %>
+</p>
 
-  <p>
-    <strong>Org:</strong>
-    <%= @deal.org_id %>
-  </p>
+<p>
+  <strong>Name:</strong>
+  <%= @deal.name %>
+</p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @deal.name %>
-  </p>
+<p>
+  <strong>Description:</strong>
+  <%= @deal.description %>
+</p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @deal.description %>
-  </p>
+<p>
+  <strong>Default url:</strong>
+  <%= @deal.default_url %>
+</p>
 
-  <p>
-    <strong>Default url:</strong>
-    <%= @deal.default_url %>
-  </p>
+<p>
+  <strong>Status:</strong>
+  <%= @deal.status %>
+</p>
 
-  <p>
-    <strong>Status:</strong>
-    <%= @deal.status %>
-  </p>
+<p>
+  <strong>Expires on:</strong>
+  <%= @deal.expires_on %>
+</p>
 
-  <p>
-    <strong>Expires on:</strong>
-    <%= @deal.expires_on %>
-  </p>
+<p>
+  <strong>Commission:</strong>
+  <%= @deal.commission %>
+</p>
 
-  <p>
-    <strong>Commission:</strong>
-    <%= @deal.commission %>
-  </p>
+<p>
+  <strong>Commission type:</strong>
+  <%= @deal.commission_type %>
+</p>
 
-  <p>
-    <strong>Commission type:</strong>
-    <%= @deal.commission_type %>
-  </p>
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>
 
-  <%= link_to 'Edit', edit_deal_path(@deal) %> |
-  <%= link_to 'Back', deals_path %>
+<%= render partial: 'landing_pages/table', locals: { landing_pages: @deal.landing_pages } %>
 
-  <%= render partial: 'landing_pages/table', locals: { landing_pages: @deal.landing_pages } %>
-
-  <%= render partial: 'earnings/table', locals: { earnings: @deal.earnings } %>
-
-</div>
+<%= render partial: 'earnings/table', locals: { earnings: @deal.earnings } %>
