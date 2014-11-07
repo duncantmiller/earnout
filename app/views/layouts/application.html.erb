@@ -57,7 +57,9 @@
           </ul>
         </section>
       </nav>
-      <%= yield %>
+      <%= render partial: "sub_nav" %>
+        <%= yield %>
+      <%= render partial: "closing_div" %>
       <div id="root_footer"></div>
     </div>
 
