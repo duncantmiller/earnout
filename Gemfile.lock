@@ -81,14 +81,10 @@ GEM
     json (1.8.1)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
-    mailgun_rails (0.6.2)
-      rails (>= 3.2.13)
-      rest-client (>= 1.6.7)
     method_source (0.8.2)
     mime-types (2.4.1)
     minitest (5.4.2)
     multi_json (1.10.1)
-    netrc (0.8.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     pry (0.10.1)
@@ -133,9 +129,6 @@ GEM
       json (~> 1.4)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
-    rest-client (1.7.2)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -209,7 +202,6 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
-  mailgun_rails
   pg
   pry-rails
   puma-rails

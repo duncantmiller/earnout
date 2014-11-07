@@ -82,11 +82,15 @@ Rails.application.configure do
   # rack-google-analtyics gem
   config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-56259099-1'
 
-  #mailgun_rails gem
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-    api_key: 'key-d4af102bb6d371d0b72ffd24bb3cac11',
-    domain: 'app30647560.mailgun.org'
+  # mailgun setup
+  ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'app30647560.mailgun.org',
+  :authentication => :plain,
   }
+  ActionMailer::Base.delivery_method = :smtp
 
 end
