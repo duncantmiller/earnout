@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :t, controller: 'trackings', as: 't'
 
-  resources :e, controller: 'earnings', as: 'e'
+  get '/e', to: 'earnings#register_collection'
 
   resources :earnings
 

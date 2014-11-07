@@ -1,6 +1,6 @@
 class EarningsController < ApplicationController
 
-  def index
+  def register_collection
     deal = Deal.find(params[:deal_id])
     earning = Earning.new(deal: deal)
     return unless earning.has_matching_cookie?(cookies.signed[:hidden_deal_ids])
@@ -8,6 +8,10 @@ class EarningsController < ApplicationController
       earning.amount = params[:amount]
     end
     earning.save!
+  end
+
+  def index
+    @earnings = Earning.all
   end
 
   def show
