@@ -81,4 +81,9 @@ Rails.application.configure do
 
   # rack-google-analtyics gem
   config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-56259099-1'
+
+  #mailgunner gem
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = { domain: '<mailgun domain>' }
+
 end
