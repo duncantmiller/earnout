@@ -84,6 +84,6 @@ Rails.application.configure do
 
   #mailgunner gem
   config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = { domain: '<mailgun domain>' }
+  config.action_mailer.mailgun_settings = { domain: 'app30647560.mailgun.org' }
 
 end
