@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   resources :earnings
 
+  resources :dashboards do
+    collection do
+      get 'home'
+    end
+  end
+
   get '/smoke_test', to: 'home#smoke_test'
 
   # The priority is based upon order of creation: first created -> highest priority.
