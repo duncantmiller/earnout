@@ -3,6 +3,6 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    mail(to: @user.email, bcc: 'dmiller@heatspring.com', subject: 'Welcome to EarnOut')
+    mail(to: @user.email, cc: 'dmiller@heatspring.com', subject: 'Welcome to EarnOut')
   end
 end
