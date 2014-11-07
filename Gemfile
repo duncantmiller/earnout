@@ -47,7 +47,7 @@ gem 'foundation-icons-sass-rails'
 gem 'devise'
 gem 'validate_url'
 gem 'rack-google-analytics'
-gem 'mailgunner', '~> 2.0.0'
+gem 'mailgun_rails'
 
 group :development, :test do
    gem 'rspec-rails'
